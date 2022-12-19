@@ -1,28 +1,89 @@
-html {
-  font-size: 14px;
+/*General*/
+:root {
+    --darkestGrey: #343631;
+    --lightBrown: #926f47;
+    --darkBlue: #366a82;
+    --lightBlue: #89d0ee;
+    --lightestBlue: #ddf3fe;
+    --tanWhite: #fefbf6;
+    --outlineColor: transparent; /*#00ff21*/
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: var(--tanWhite);
 }
 
 /*Navbar*/
+#navbarContainer {
+    outline: 2px dashed var(--outlineColor);
+}
+#navbarHeadingContainer {
+    display: flex;
+    height: 125px;
+    align-items: center;
+    justify-content: center;
+    outline: 2px dashed var(--outlineColor);
+}
+#navbarHeading {
+    font-size: 64px;
+    font-family: "Amatic SC";
+    color: var(--darkBlue);
+    text-align: center;
+    outline: 2px dashed var(--outlineColor);
+}
 
-#navbarContainer
+a.nav-link:link {
+    color: var(--darkestGrey);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a.nav-link:visited {
+    color: var(--darkestGrey);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a.nav-link:hover {
+    color: var(--darkBlue);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a.nav-link:active {
+    color: var(--darkBlue);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.nav-item {
+    font-size:22px;
+    font-family: "Times New Roman";
+}
+
+/*Dropdown NavItem*/
+
 
 /*Index Page*/
 #indexPageContainer{
     height: 1000px;
 }
 
+/*Footer*/
+#pageFooter{
+    background-color: var(--darkBlue);
+    color: var(--lightestBlue);
+}
+/*Different Size Display*/
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}

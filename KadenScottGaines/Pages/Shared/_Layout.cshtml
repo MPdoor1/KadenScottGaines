@@ -7,18 +7,33 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/KadenScottGaines.styles.css" asp-append-version="true" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Amatic+SC">
 </head>
 <body>
     <header>
+        @*Navbar*@
         <nav class="nav" id="navbarContainer">
-            <div class="container">
+            <div class="container ">
+
+                @*Navbar Heading*@
+                <div id="navbarHeadingContainer">
+                    <h3 id="navbarHeading">Kaden's Cabana</h3>
+                </div>
+
+                @*Navbar Items*@
                     <ul class="nav justify-content-center flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Content">Content</a>
-                        </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Hover me  </a>
+                        <ul class="dropdown-menu fade-up">
+                            <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                            <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                            <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+                        </ul>
+                    </li>
                     <partial name="_LoginPartial" />
                     </ul>
                 </div>
@@ -31,7 +46,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-center">
+    <footer class="border-top footer text-center" id="pageFooter">
         <div class="container">
             &copy; 2022 - KadenScottGaines
         </div>
