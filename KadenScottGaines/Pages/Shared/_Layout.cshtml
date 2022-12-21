@@ -27,11 +27,20 @@
                             <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
                         </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Hover me  </a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Content</a>
                         <ul class="dropdown-menu fade-up">
-                            <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-                            <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
-                            <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+                            <li><a class="dropdown-item" asp-page="/Music"> Music</a></li>
+                            <li>
+                                <a class="dropdown-item" href="
+https://discord.gg/6ZVudKeK2v">Discord</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://www.twitch.tv/mpdoor
+">Twitch</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-page="/Youtube">Youtube</a>
+                            </li>
                         </ul>
                     </li>
                     <partial name="_LoginPartial" />

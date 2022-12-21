@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataLayer", "DataLayer", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LogicLayer", "LogicLayer", "{7D7AAAC6-3448-4748-A08E-B2E5AA7DB94B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainLib", "..\DomainLib\DomainLib.csproj", "{D776104B-E3A4-4FF9-83C8-F7F256A6016D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainLib", "..\DomainLib\DomainLib.csproj", "{D776104B-E3A4-4FF9-83C8-F7F256A6016D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfrastructureLib", "..\InfrastructureLib\InfrastructureLib.csproj", "{3C10FDF0-6319-4E7C-9A18-B833F41B4822}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfrastructureLib", "..\InfrastructureLib\InfrastructureLib.csproj", "{3C10FDF0-6319-4E7C-9A18-B833F41B4822}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
