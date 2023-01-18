@@ -7,6 +7,7 @@
     --lightestBlue: #ddf3fe;
     --tanWhite: #fefbf6;
     --outlineColor: transparent; /*#00ff21*/
+    --lightGrey: #D3D3D3;
 }
 
 html {
@@ -18,6 +19,28 @@ html {
 body {
     margin-bottom: 60px;
     background-color: var(--tanWhite);
+}
+
+a{
+    color:none;
+    text-decoration:none;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    outline: 2px solid var(--outlineColor);
+}
+
+li {
+    /*  background-color: #ebebeb;
+    border-radius: 5px;*/
+    display: inline-block;
+    margin: 10px 1.5%;
+    border: 2px solid var(--outlineColor);
 }
 
 /*Navbar*/
@@ -40,73 +63,176 @@ body {
 }
 
 a.nav-link:link {
-    color: var(--darkestGrey);
     text-decoration: none;
     font-weight: normal;
+    outline: 2px dashed var(--outlineColor);
 }
 
 a.nav-link:visited {
     color: var(--darkestGrey);
     text-decoration: none;
     font-weight: normal;
+    outline: 2px dashed var(--outlineColor);
 }
 
 a.nav-link:hover {
-    color: var(--darkBlue);
+    color: var(--lightBrown);
     text-decoration: none;
     font-weight: normal;
+    outline: 2px dashed var(--outlineColor);
 }
 
 a.nav-link:active {
     color: var(--darkBlue);
     text-decoration: none;
     font-weight: normal;
+    outline: 2px dashed var(--outlineColor);
 }
 
 .nav-item {
     font-size: 22px;
     font-family: "Times New Roman";
+    outline: 2px dashed var(--outlineColor);
 }
 
 /*Dropdown NavItem*/
 .nav-link.dropdown-toggle {
     color: var(--darkestGrey);
-    color: var(--darkestGrey);
+    outline: 2px dashed var(--outlineColor);
 }
+
 a.dropdown {
-    color: var(--darkestGrey);
-    color: var(--darkestGrey);
+    outline: 2px dashed var(--outlineColor);
 }
+
 .nav-item .dropdown-menu {
     display: block;
+    border:none;
     opacity: 0;
     visibility: hidden;
     transition: .3s;
     margin-top: 0;
-    color: var(--darkestGrey);
+    background-color: var(--lightGrey);
+    outline: 2px dashed var(--outlineColor);
 }
+
 .dropdown-menu.fade-down {
     top: 80%;
     transform: rotateX(-75deg);
     transform-origin: 0% 0%;
-    color: var(--darkestGrey);
 }
+
 .dropdown-menu.fade-up {
     top: 180%;
-    color: var(--darkestGrey);
 }
+
 .nav-item:hover .dropdown-menu {
-    color: var(--darkestGrey);
     transition: .3s;
     opacity: 1;
     visibility: visible;
     top: 100%;
     transform: rotateX(0deg);
+    outline: 2px dashed var(--outlineColor);
+}
+
+.dropdown-item {
+    background-color: var(--lightGrey);
+    color: var(--lightBrown);
+}
+
+.dropdown-item:hover{
+    background-color:var(--lightGrey);
+    color: var(--darkBlue);
+}
+
+/*Taking care of the stupic godamn links*/
+#discordItem {
+    background-color: var(--lightGrey);
+    color: var(--lightBrown);
+}
+
+#discordItem:hover {
+    background-color: var(--lightGrey);
+    color: var(--darkBlue);
+}
+
+#twitchItem {
+    background-color: var(--lightGrey);
+    color: var(--lightBrown);
+}
+
+#twitchItem:hover {
+    background-color: var(--lightGrey);
+    color: var(--darkBlue);
 }
 
 /*Index Page*/
-#indexPageContainer{
+#indexPageContainer {
     height: 1000px;
+}
+
+/*Youtube*/
+#youtubeContainer {
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    outline: 2px solid var(--outlineColor);
+}
+
+.headCont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    outline: 2px solid var(--outlineColor);
+}
+
+.head {
+    font-size: 36px;
+    outline: 2px solid var(--outlineColor);
+}
+
+.sectBody {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    outline: 2px solid var(--outlineColor);
+}
+
+.sloganHeader {
+    width: 100%;
+    display: flex;
+    font-size: 28px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    outline: 2px solid var(--outlineColor);
+}
+
+.list {
+    text-align: center;
+    margin: auto;
+    outline: 2px solid var(--outlineColor);
+}
+
+.item {
+    font-size: 16px;
+    height: 36px;
+    width: 100%;
+    margin: auto;
+    outline: 2px solid var(--outlineColor);
+}
+
+.sectOne {
+    width: 33%;
+    outline: 2px solid var(--outlineColor);
+}
+
+.sectTwo {
+    width: 33%;
+    outline: 2px solid var(--outlineColor);
 }
 
 /*Footer*/
@@ -114,6 +240,7 @@ a.dropdown {
     background-color: var(--darkBlue);
     color: var(--lightestBlue);
 }
+
 /*Different Size Display*/
 @media (min-width: 768px) {
     html {
