@@ -11,43 +11,34 @@
           href="https://fonts.googleapis.com/css?family=Amatic+SC">
 </head>
 <body>
-    <header>
-        @*Navbar*@
-        <nav class="nav" id="navbarContainer">
-            <div class="container ">
-
-                @*Navbar Heading*@
-                <div id="navbarHeadingContainer">
-                    <h3 id="navbarHeading">Kaden's Cabana</h3>
-                </div>
-
-                @*Navbar Items*@
-                    <ul class="nav justify-content-center flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Content</a>
-                            <ul class="dropdown-menu fade-up">
-                                <li><a class="dropdown-item" asp-page="/Music"> Music</a></li>
-                                <li>
-                                <a id="discordItem" class="dropdown-item" href="
-                                   https://discord.gg/6ZVudKeK2v">Discord</a>
-                                </li>
-                                <li>
-                                    <a id="twitchItem" class="dropdown-item" href="https://www.twitch.tv/mpdoor
-    ">Twitch</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="https://www.youtube.com/channel/UCXeJpq-jSZWkGbtJ-2N1R4w">Youtube</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <partial name="_LoginPartial" />
-                    </ul>
-                </div>
-        </nav>
-    </header>
+<header>
+@*Navbar*@
+<nav class="nav" id="navbarContainer">
+    <div class="container ">
+    @*Navbar Heading*@
+    <div id="navbarHeadingContainer">
+        <h3 id="navbarHeading">Kaden's Cabana</h3>
+    </div>
+    @*Navbar Items*@
+        <ul class="nav justify-content-center flex-grow-1">
+            <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Index">Home</a></li>
+            <li class="nav-item dropdown"> 
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Content</a>
+                <ul class="dropdown-menu fade-up">
+                    <li><a id="musicItem" class="dropdown-item" href="
+https://www.youtube.com/watch?v=pEYRazhQ6rs&list=PLaFjRoBF-J0oeQxEppKZoc5_-RZX9dUCY"> Music</a></li>
+                    <li><a id="discordItem" class="dropdown-item" href="https://discord.gg/6ZVudKeK2v">Discord</a> </li>
+                    <li><a id="twitchItem" class="dropdown-item" href="https://www.twitch.tv/mpdoor
+">Twitch</a></li>
+                    <li><a id="youtubeItem" class="dropdown-item" href="https://www.youtube.com/channel/UCXeJpq-jSZWkGbtJ-2N1R4w">Youtube</a></li>
+                </ul>
+            </li>
+                <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Contact">Contact</a></li>
+            <partial name="_LoginPartial" />
+        </ul>
+    </div>
+</nav>
+</header>
 
         <div class="container">
             <main role="main" class="pb-3">

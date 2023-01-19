@@ -5,7 +5,7 @@ let h = canvas.height = 300;
 let w = canvas.width = window.innerWidth - 12;
 
 let circles = [];
-let color = ['red', 'blue', 'yellow'];
+let color = ['#ddf3fe', '#926f47', '#343631', '#D3D3D3', '#89d0ee'];
 
 class Circle {
     constructor(x, y, dx, dy, g, radius, color) {
@@ -45,7 +45,7 @@ class Circle {
             this.dy = (-this.dy) + 0.5;
             this.y = h - this.radius;
         }
-        if (this.y - this.radius <= 0.5) {
+        if (this.y - this.radius <= 0) {
             this.dy = (-this.dy) + 1;
             this.y = 0 + this.radius;
         }
@@ -73,7 +73,7 @@ function gameLoop() {
 function setUp(numberOfCircles) {
     circles = []
     for (var i = 0; i < numberOfCircles; i++) {
-        circles.push(new Circle(Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.random()* 3, Math.random()*3, 0.25, Math.random()*(25 - 50) +50, color[Math.floor(Math.random()*color.length)]))
+        circles.push(new Circle(Math.floor(Math.random() * w), Math.floor(Math.random() * 100), Math.random()* 3, Math.random()*3, 0.25, Math.random()*(25 - 50) +50, color[Math.floor(Math.random()*color.length)]))
     }
 }
 

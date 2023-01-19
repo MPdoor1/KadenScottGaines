@@ -168,14 +168,34 @@ a.dropdown {
     color: var(--darkBlue);
 }
 
-/*Index Page*/
-#indexPageContainer {
-    height: 1000px;
+#youtubeItem {
+    background-color: var(--lightGrey);
+    color: var(--lightBrown);
 }
 
-/*Youtube*/
-#youtubeContainer {
-    height: 300px;
+#youtubeItem:hover {
+    background-color: var(--lightGrey);
+    color: var(--darkBlue);
+}
+
+#musicItem {
+    background-color: var(--lightGrey);
+    color: var(--lightBrown);
+}
+
+#musicItem:hover {
+    background-color: var(--lightGrey);
+    color: var(--darkBlue);
+}
+
+/*Index Page*/
+#indexPageContainer {
+    height: 200px;
+}
+
+/*Contact*/
+#contactContainer {
+    height: 200px;
     width: 100%;
     margin: auto;
     outline: 2px solid var(--outlineColor);
