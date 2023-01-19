@@ -1,7 +1,7 @@
 ﻿const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-let h = canvas.height = window.innerHeight + 20;
+let h = canvas.height = 300;
 let w = canvas.width = window.innerWidth - 12;
 
 let circles = [];
@@ -41,9 +41,13 @@ class Circle {
             this.x = 0 + this.radius;
         }
 
-        if (this.y + this.radius >= h || this.y - this.radius <= 0) {
-            this.dy = (-this.dy) + 2;
+        if (this.y + this.radius >= h ) {
+            this.dy = (-this.dy) + 0.5;
             this.y = h - this.radius;
+        }
+        if (this.y - this.radius <= 0.5) {
+            this.dy = (-this.dy) + 1;
+            this.y = 0 + this.radius;
         }
     }
 }
@@ -62,13 +66,14 @@ function gameLoop() {
         circle.draw(ctx)
         circle.move(circle)
     }
+
     requestAnimationFrame(gameLoop)
 }
 
 function setUp(numberOfCircles) {
     circles = []
     for (var i = 0; i < numberOfCircles; i++) {
-        circles.push(new Circle(Math.floor(Math.random() * w), Math.floor(Math.random() * h), Math.random()* 4, Math.random()*4, 0.5, Math.random()*(25 - 50) +50, color[Math.floor(Math.random()*color.length)]))
+        circles.push(new Circle(Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.random()* 3, Math.random()*3, 0.25, Math.random()*(25 - 50) +50, color[Math.floor(Math.random()*color.length)]))
     }
 }
 
