@@ -10,12 +10,6 @@
     --lightGrey: #D3D3D3;
 }
 
-#canvas {
-    position: relative;
-    min-height: 100%;
-    font-size: 14px;
-}
-
 html {
     position: relative;
     min-height: 100%;
@@ -245,6 +239,8 @@ a.dropdown {
 #pageFooter{
     background-color: var(--darkBlue);
     color: var(--lightestBlue);
+    height: 67px;
+    outline: none;
 }
 
 /*Different Size Display*/

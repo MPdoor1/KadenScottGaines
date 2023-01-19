@@ -50,14 +50,15 @@
 
         </nav>
     </header>
-    @*Javascript Canvas*@
-    <canvas id="canvas"></canvas>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    @*Javascript Canvas*@
+    <canvas id="canvas">
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </canvas>
 
     <footer class="border-top footer text-center" id="pageFooter">
         <div class="container">

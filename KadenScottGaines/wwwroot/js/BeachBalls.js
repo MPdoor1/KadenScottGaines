@@ -1,43 +1,71 @@
-﻿const canvas = document.getElementById('canvas')
-const index = document.getElementById('indexPageContainer');
-const c = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+﻿const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-//Variables
-const beachBall = {
-    x: 1000,
-    y: 300,
-    r: 50,
-    dx: 1.5,
-    dy: 0.25
-}
+let h = canvas.height = window.innerHeight + 20;
+let w = canvas.width = window.innerWidth - 12;
+const numberOfCircles = 10;
+let circles = [];
+let color = ['red', 'blue', 'yellow'];
 
-let gravity = {
-    g: 0.5
-}
-
-//running the whole function
-function animate() {
-    //Clear Page
-    c.clearRect(0, 0, innerWidth, innerHeight);
-
-    //beachBall
-    c.beginPath();
-    c.arc(beachBall.x, beachBall.y, beachBall.r, 0, Math.PI * 2, false);
-    c.fillStyle = '#000';
-    c.fill();
-
-    //moving the beachBall
-    beachBall.x -= beachBall.dx;
-    beachBall.y -= beachBall.dy
-    beachBall.dy -= gravity.g
-
-    //making it bounce
-    if (beachBall.y + beachBall.r >= innerHeight) {
-        beachBall.dy = -beachBall.dy
+class Circle {
+    constructor(x, y, dx, dy, g, radius, color) {
+        this.x = x
+        this.y = y
+        this.dx = dx
+        this.dy = dy
+        this.g = g
+        this.color = color
+        this.radius = radius
     }
 
-    requestAnimationFrame(animate)
+    draw(ctx) {
+        ctx.beginPath();
+        ctx.fillStyle = this.color;
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fill();
+    }
+
+    move(circles) {
+        this.check(circles)
+        this.x += this.dx;
+        this.y += this.dy;
+        this.dy += this.g;
+    }
+    check() {
+        if (this.x + this.radius >= w) {
+            this.dx = -this.dx;
+            this.x = w - this.radius;
+        }
+        if (this.x - this.radius < 0) {
+            this.dx = -this.dx;
+            this.x = 0 + this.radius;
+        }
+
+        if (this.y + this.radius >= h || this.y - this.radius <= 0) {
+            this.dy = (-this.dy) + 2;
+            this.y = h - this.radius;
+        }
+    }
 }
-requestAnimationFrame(animate)
+
+setUp()
+gameLoop()
+
+function gameLoop() {
+    ctx.clearRect(0, 0, w, h)
+   
+    for (let i = 0; i < circles.length; i++) {
+        const circle = circles[i]
+        circle.draw(ctx)
+        circle.move(circle)
+    }
+    requestAnimationFrame(gameLoop)
+}
+
+function setUp() {
+    circles = []
+    for (var i = 0; i < numberOfCircles; i++) {
+        circles.push(new Circle(Math.floor(Math.random() * w), Math.floor(Math.random() * h), Math.random()* 4, Math.random()*4, 0.5, Math.random()*(25 - 50) +50, color[Math.floor(Math.random()*color.length)]))
+    }
+}
+
