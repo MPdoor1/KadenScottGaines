@@ -10,6 +10,12 @@
     --lightGrey: #D3D3D3;
 }
 
+#canvas {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -39,7 +45,7 @@ li {
     /*  background-color: #ebebeb;
     border-radius: 5px;*/
     display: inline-block;
-    margin: 10px 1.5%;
+    /*margin: 10px 1.5%;*/
     border: 2px solid var(--outlineColor);
 }
 
