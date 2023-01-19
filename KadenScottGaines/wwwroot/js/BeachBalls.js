@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 
 let h = canvas.height = window.innerHeight + 20;
 let w = canvas.width = window.innerWidth - 12;
-const numberOfCircles = 10;
+
 let circles = [];
 let color = ['red', 'blue', 'yellow'];
 
@@ -48,8 +48,11 @@ class Circle {
     }
 }
 
-setUp()
-gameLoop()
+function submitForm() {
+    var numberOfCircles = document.getElementById("userInput").value;
+    setUp(numberOfCircles)
+    gameLoop()
+}
 
 function gameLoop() {
     ctx.clearRect(0, 0, w, h)
@@ -62,7 +65,7 @@ function gameLoop() {
     requestAnimationFrame(gameLoop)
 }
 
-function setUp() {
+function setUp(numberOfCircles) {
     circles = []
     for (var i = 0; i < numberOfCircles; i++) {
         circles.push(new Circle(Math.floor(Math.random() * w), Math.floor(Math.random() * h), Math.random()* 4, Math.random()*4, 0.5, Math.random()*(25 - 50) +50, color[Math.floor(Math.random()*color.length)]))

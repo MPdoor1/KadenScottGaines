@@ -4,18 +4,27 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center" id="indexPageContainer">
-
-    <div id="sectionOne">
-
+<div id="youtubeContainer">
+    <div style="height:50px;"></div>
+    <div class="headCont">
+        <h3 class="head">Youtube</h3>
     </div>
-
-    <div id="sectionTwo">
-
+    <h5 class="sloganHeader">Ride for Family, Fun, and Fitness.</h5>
+    <div style="height:25px;"></div>
+    <div class="sectBody">
+        <div class="sectOne">
+            <ul class="list">
+                <li class="item">Come stop by for bike & scooter Vending.</li>
+                <li class="item"><i>Call 1+ 440-487-5018 for any inquiries.</i></li>
+            </ul>
+            
+    <form id="form" onsubmit="return false;">
+        <input  type="number" id="userInput" />
+        <input  type="submit" onclick="submitForm();" />
+    </form>
+        </div>
+        <div class="sectTwo">
+            <iframe width="267" height="150" src="https://www.youtube.com/embed/tUhBi3utEs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
     </div>
-
-    <div id="sectionThree">
-
-    </div>
-
 </div>

@@ -47,6 +47,7 @@ li {
 #navbarContainer {
     outline: 2px dashed var(--outlineColor);
 }
+
 #navbarHeadingContainer {
     display: flex;
     height: 125px;
@@ -54,6 +55,7 @@ li {
     justify-content: center;
     outline: 2px dashed var(--outlineColor);
 }
+
 #navbarHeading {
     font-size: 64px;
     font-family: "Amatic SC";
