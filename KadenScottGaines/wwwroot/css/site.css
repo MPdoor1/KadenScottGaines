@@ -334,6 +334,17 @@ a.dropdown {
     outline: 2px solid var(--outlineColor);
 }
 
+/*Logout*/
+#logoutButton {
+    color: var(--darkBlue);
+    font-size: 22px;
+    font-family: "Times New Roman";
+    outline: 2px dashed var(--outlineColor);
+}
+    #logoutButton:hover {
+        color: var(--lightBrown);
+    }
+
 /*Footer*/
 #pageFooter{
     background-color: var(--darkBlue);
