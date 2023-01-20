@@ -9,22 +9,29 @@
 @*    <div class="headCont">
         <h3 class="head">Youtube</h3>
     </div>*@
-    <h5 class="sloganHeader">Ride for Family, Fun, and Fitness.</h5>
+    <h5 id=''class="sloganHeader" style="text-align:center;">"A man's worth is no greater than his ambitions." -Marcus Aurelius</h5>
     <div style="height:25px;"></div>
     <div class="sectBody">
         <div class="sectOne">
             <ul class="list">
-                <li class="item">Come stop by for bike & scooter Vending.</li>
-                
+                <li class="item">Developer</li>
+                <li class="item">Musician</li>
+                <li class="item">Euntrapaneur</li>
+                <li class="item">Hobbyist</li>
+                <li class="item">Content Creator</li>
             </ul>
-            
-    <form id="form" onsubmit="return false;">
-        <input  type="number" id="userInput" />
-        <input  type="submit" onclick="submitForm();" />
-    </form>
         </div>
         <div class="sectTwo">
-          <img src="css\ProfilPicture.jpg" style="height: 100px;"/>
+          <img id="indexImg" src="css\ProfilPicture.jpg" style="height: 250px;"/>
         </div>
     </div>
+
+    <div id="hutContainer">
+        <img id="beachHut" src="css/beachHut.jpg"/>
+        <form id="form" onsubmit="return false;">
+            <input class="beachHutInput" type="number" value="1" id="userInput" />
+           <button id="beachHutSubmit" type="submit" onclick="submitForm();">Go</button>
+        </form>
+    </div>
+
 </div>

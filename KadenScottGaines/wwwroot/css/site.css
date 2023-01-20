@@ -17,6 +17,7 @@ html {
 }
 
 body {
+  
     margin-bottom: 60px;
     background-color: var(--tanWhite);
 }
@@ -41,6 +42,7 @@ li {
     display: inline-block;
     /*margin: 10px 1.5%;*/
     border: 2px solid var(--outlineColor);
+    font-family: "Times New Roman";
 }
 
 /*Navbar*/
@@ -140,6 +142,7 @@ a.dropdown {
 .dropdown-item {
     background-color: var(--lightGrey);
     color: var(--lightBrown);
+
 }
 
 .dropdown-item:hover{
@@ -187,10 +190,77 @@ a.dropdown {
     background-color: var(--lightGrey);
     color: var(--darkBlue);
 }
+#gitItem {
+    background-color: var(--lightGrey);
+    color: var(--lightBrown);
+}
+
+#gitItem:hover {
+    background-color: var(--lightGrey);
+    color: var(--darkBlue);
+}
 
 /*Index Page*/
 #indexPageContainer {
     height: 200px;
+}
+
+#indexImg{
+    border-radius: 16px;
+}
+
+#beachHut {
+    z-index: -1;
+    position: absolute;
+    top: 63%;
+    height: 350px;
+    outline: 2px dashed var(--outlineColor);
+}
+
+.beachHutInput {
+    position: absolute;
+    left: 58%;
+    top: 100px;
+    background-color: transparent;
+    width: 45px;
+    font-size: 32px;
+    text-align:center;
+    border: none;
+    outline: 2px dashed var(--outlineColor);
+}
+
+    .beachHutInput:focus {
+        position: absolute;
+        left: 58%;
+        top: 100px;
+        background-color: transparent;
+        width: 45px;
+        font-size: 32px;
+        text-align: center;
+        border: none;
+        outline: 2px dashed var(--outlineColor);
+    }
+
+#beachHutSubmit {
+    position: absolute;
+    left: 40%;
+    top: 210px;
+    background-color: var(--lightestBlue);
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    font-weight:700;
+    font-size: 12px;
+    color: var(--darkestGrey);
+    outline: 2px dashed var(--outlineColor);
+}
+
+#hutContainer {
+    position: relative;
+    width: 300px;
+    outline: 2px dashed var(--outlineColor);
 }
 
 /*Contact*/
@@ -224,6 +294,8 @@ a.dropdown {
 }
 
 .sloganHeader {
+    /*  font-family: 'Architects Daughter';*/
+    font-family: "Times New Roman";
     width: 100%;
     display: flex;
     font-size: 28px;
@@ -240,9 +312,10 @@ a.dropdown {
 }
 
 .item {
-    font-size: 16px;
+    font-size: 20px;
     height: 36px;
     width: 100%;
+    padding: 10px;
     margin: auto;
     outline: 2px solid var(--outlineColor);
 }
