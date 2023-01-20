@@ -218,18 +218,20 @@ a.dropdown {
 }
 
 .beachHutInput {
+    z-index: -1;
     position: absolute;
     left: 58%;
     top: 100px;
     background-color: transparent;
     width: 45px;
     font-size: 32px;
-    text-align:center;
+    text-align: center;
     border: none;
     outline: 2px dashed var(--outlineColor);
 }
 
     .beachHutInput:focus {
+        z-index: -1;
         position: absolute;
         left: 58%;
         top: 100px;
@@ -242,6 +244,7 @@ a.dropdown {
     }
 
 #beachHutSubmit {
+    z-index:-1;
     position: absolute;
     left: 40%;
     top: 210px;
@@ -258,6 +261,7 @@ a.dropdown {
 }
 
 #hutContainer {
+    z-index: -1;
     position: relative;
     width: 300px;
     outline: 2px dashed var(--outlineColor);

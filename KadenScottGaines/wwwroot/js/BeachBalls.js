@@ -76,4 +76,3 @@ function setUp(numberOfCircles) {
         circles.push(new Circle(Math.floor(Math.random() * w), Math.floor(Math.random() * 100), Math.random()* 3, Math.random()*3, 0.25, Math.random()*(25 - 50) +50, color[Math.floor(Math.random()*color.length)]))
     }
 }
-
