@@ -206,11 +206,11 @@ a.dropdown {
 }
 
 #indexImg{
-    border-radius: 16px;
+   /* border-radius: 16px;*/
 }
 
 #beachHut {
-    z-index: -1;
+    z-index: -2;
     position: absolute;
     top: 63%;
     height: 350px;
@@ -218,7 +218,7 @@ a.dropdown {
 }
 
 .beachHutInput {
-    z-index: -1;
+/*    z-index: -1;*/
     position: absolute;
     left: 58%;
     top: 100px;
@@ -231,7 +231,7 @@ a.dropdown {
 }
 
     .beachHutInput:focus {
-        z-index: -1;
+        /*z-index: -1;*/
         position: absolute;
         left: 58%;
         top: 100px;
@@ -244,7 +244,7 @@ a.dropdown {
     }
 
 #beachHutSubmit {
-    z-index:-1;
+    /*z-index:-1;*/
     position: absolute;
     left: 40%;
     top: 210px;
@@ -254,14 +254,14 @@ a.dropdown {
     border-radius: 25px;
     width: 25px;
     height: 25px;
-    font-weight:700;
+    font-weight: 700;
     font-size: 12px;
     color: var(--darkestGrey);
     outline: 2px dashed var(--outlineColor);
 }
 
 #hutContainer {
-    z-index: -1;
+    /*z-index: -1;*/
     position: relative;
     width: 300px;
     outline: 2px dashed var(--outlineColor);
